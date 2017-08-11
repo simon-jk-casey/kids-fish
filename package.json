@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-react-webpack",
+  "name": "kids-fish",
   "version": "0.1.1",
-  "description": "A webpack React starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "description": "digital child licensing for fish and game ",
+  "repository": "https://github.com/simon-jk-casey/kids-fish.git",
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon --watch server server/index & webpack --watch",
@@ -22,8 +22,8 @@
       "stage-0"
     ]
   },
-  "author": "EDA",
-  "license": "ISC",
+  "author": "simon casey",
+  "license": "GNU GPLv3",
   "devDependencies": {
     "ava": "^0.19.1",
     "babel-core": "^6.24.1",
