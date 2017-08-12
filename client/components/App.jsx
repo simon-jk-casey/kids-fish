@@ -5,7 +5,8 @@ class App extends React.Component {
     super(props)
     console.log(this)
     this.state = {
-      issueDate: this.todaysDate()
+      issueDate: this.todaysDate(),
+      licenseNumber: '00000001'
     }
     this.regions = [
       'Northland',
@@ -96,7 +97,14 @@ class App extends React.Component {
               value={state.issueDate}
               placeholder={state.issueDate} />
           </div>
-          <div className='inputLicenseNumber'></div>
+          <div className='inputLicenseNumber'>
+            <input
+              id='licenseNumber'
+              type='text'
+              disabled='disabled'
+              value={state.licenseNumber}
+              placeholder={state.licenseNumber} />
+          </div>
         </form>
       </div>
     )
