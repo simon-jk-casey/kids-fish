@@ -3,7 +3,7 @@ import React from 'react'
 class App extends React.Component {
   constructor (props) {
     super(props)
-    console.log(props)
+    console.log(this)
     this.state = {
       issueDate: this.todaysDate()
     }
@@ -39,13 +39,63 @@ class App extends React.Component {
   }
 
   render () {
+    const { state, regions } = this
     return (
       <div className='licenseWrapper'>
         <form>
-          <div className='inputName'></div>
-          <div className='inputBirthDate'></div>
-          <div className='inputAddress'></div>
-          <div className='inputIssueDate'></div>
+          <div className='inputName'>
+            <input
+              id='name'
+              type='text'
+              name='name'
+              placeholder='enter name' />
+          </div>
+          <div className='inputBirthDate'>
+            <input
+              id='birthdate'
+              type='date'
+              name='birthdate' />
+          </div>
+          <div className='inputAddress'>
+            <div>
+              <input
+                id='addressLineOne'
+                type='text'
+                name='addressLineOne' />
+            </div>
+            <div>
+              <input
+                id='addressLineTwo'
+                type='text'
+                name='addressLineTwo' />
+            </div>
+            <div>
+              <input
+                id='cityTown'
+                type='text'
+                name='cityTown' />
+            </div>
+            <div>
+              <select
+                id='region'
+                defaultValue='null'
+                name='region'>
+                {
+                  regions.map((region, index) =>
+                    <option key={index} value={region}>{region}</option>
+                  )
+                }
+              </select>
+            </div>
+          </div>
+          <div className='inputIssueDate'>
+            <input
+              id='issueDate'
+              type='text'
+              disabled='disabled'
+              value={state.issueDate}
+              placeholder={state.issueDate} />
+          </div>
           <div className='inputLicenseNumber'></div>
         </form>
       </div>
