@@ -43,8 +43,8 @@ class App extends React.Component {
     const { state, regions } = this
     return (
       <div className='licenceWrapper'>
-        <form>
-          <div className='inputName'>
+        <form className='licenceForm'>
+          <div className='inputName fieldBG'>
             <label htmlFor='name'>Full Name:</label>
             <input
               id='name'
@@ -52,29 +52,29 @@ class App extends React.Component {
               name='name'
               placeholder='enter name' />
           </div>
-          <div className='inputBirthDate'>
+          <div className='inputBirthDate fieldBG'>
             <label htmlFor='birthdate'>Date of Birth:</label>
             <input
               id='birthdate'
               type='date'
               name='birthdate' />
           </div>
-          <div className='inputAddress'>
-            <div>
+          <div className='inputAddress fieldBG'>
+            <div className='subAddress'>
               <label htmlFor='addressLineOne'>Address Line 1:</label>
               <input
                 id='addressLineOne'
                 type='text'
                 name='addressLineOne' />
             </div>
-            <div>
+            <div className='subAddress'>
               <label htmlFor='addressLineTwo'>Address Line 2:</label>
               <input
                 id='addressLineTwo'
                 type='text'
                 name='addressLineTwo' />
             </div>
-            <div>
+            <div className='subAddress'>
               <label htmlFor='cityTown'>City/Town:</label>
               <input
                 id='cityTown'
@@ -95,7 +95,7 @@ class App extends React.Component {
               </select>
             </div>
           </div>
-          <div className='inputIssueDate'>
+          <div className='inputIssueDate fieldBG'>
             <label htmlFor='issueDate'>Date of Issue:</label>
             <input
               id='issueDate'
@@ -105,7 +105,7 @@ class App extends React.Component {
               value={state.issueDate}
               placeholder={state.issueDate} />
           </div>
-          <div className='inputLicenceNumber'>
+          <div className='inputLicenceNumber fieldBG'>
             <label htmlFor='licenceNumber'>Your unique licence code:</label>
             <input
               id='licenceNumber'
