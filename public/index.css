@@ -1,0 +1,88 @@
+.licenceWrapper {
+  width: 635px;
+  height: 901px;
+  background-image: url('/img/license.jpg');
+}
+
+.licenceForm {
+  padding-top: 17.5%;
+}
+
+label {
+  font-size: 0.75em;
+}
+
+input {
+  border: none;
+  background: none;
+  font-size: 1.25em
+}
+
+.fieldBG {
+  background: rgba(245, 245, 245, 0.6);
+  padding: 1% 1% 1% 1%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.inputName {
+  margin-left: 55%;
+}
+
+#name {
+  text-align: center;
+}
+
+.inputBirthDate {
+  margin-top: 5%;
+  margin-left: 45%;
+}
+
+#birthdate {
+  text-align: center;
+  color: gray;
+}
+
+.inputAddress {
+  width: 45%;
+  margin-top: 5%;
+  margin-left: 27%;
+}
+
+.subAddress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+
+#region {
+  margin-left: 5%;
+}
+
+option {
+  font-size: 1.25em;
+}
+
+.inputIssueDate {
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 35%;
+}
+
+#issueDate {
+  text-align: center;
+}
+
+.inputLicenceNumber {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 35%;
+}
+
+#licenceNumber {
+  text-align: center;
+  color: red;
+}
