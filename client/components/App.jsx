@@ -101,7 +101,7 @@ class App extends React.Component {
           className='licenceForm'
           onSubmit={(evt) => this.handleSubmit(evt)}>
           <div className='inputName fieldBG'>
-            <label htmlFor='name'>Full Name:</label>
+            <label htmlFor='name'>FULL NAME:</label>
             <input
               id='name'
               type='text'
@@ -109,7 +109,7 @@ class App extends React.Component {
               onChange={(evt) => this.handleChange(evt)} />
           </div>
           <div className='inputBirthDate fieldBG'>
-            <label htmlFor='birthdate'>Date of Birth:</label>
+            <label htmlFor='birthdate'>DATE OF BIRTH:</label>
             <input
               id='birthdate'
               type='date'
@@ -118,7 +118,7 @@ class App extends React.Component {
           </div>
           <div className='inputAddress fieldBG'>
             <div className='subAddress'>
-              <label htmlFor='addressLineOne'>Address Line 1:</label>
+              <label htmlFor='addressLineOne'>ADDRESS LINE 1:</label>
               <input
                 id='addressLineOne'
                 type='text'
@@ -126,7 +126,7 @@ class App extends React.Component {
                 onChange={(evt) => this.handleChange(evt)} />
             </div>
             <div className='subAddress'>
-              <label htmlFor='addressLineTwo'>Address Line 2:</label>
+              <label htmlFor='addressLineTwo'>ADDRESS LINE 2:</label>
               <input
                 id='addressLineTwo'
                 type='text'
@@ -134,7 +134,7 @@ class App extends React.Component {
                 onChange={(evt) => this.handleChange(evt)} />
             </div>
             <div className='subAddress'>
-              <label htmlFor='cityTown'>City/Town:</label>
+              <label htmlFor='cityTown'>CITY/TOWN:</label>
               <input
                 id='cityTown'
                 type='text'
@@ -142,7 +142,7 @@ class App extends React.Component {
                 onChange={(evt) => this.handleChange(evt)} />
             </div>
             <div>
-              <label htmlFor='region'>Region:</label>
+              <label htmlFor='region'>REGION:</label>
               <select
                 id='region'
                 defaultValue='null'
@@ -158,7 +158,7 @@ class App extends React.Component {
             </div>
           </div>
           <div className='inputIssueDate fieldBG'>
-            <label htmlFor='issueDate'>Date of Issue:</label>
+            <label htmlFor='issueDate'>DATE OF ISSUE:</label>
             <input
               id='issueDate'
               type='text'
@@ -168,7 +168,7 @@ class App extends React.Component {
               placeholder={state.issueDate} />
           </div>
           <div className='inputLicenceNumber fieldBG'>
-            <label htmlFor='licenceNumber'>Your unique licence code:</label>
+            <label htmlFor='licenceNumber'>YOUR UNIQUE LICENCE CODE:</label>
             <input
               id='licenceNumber'
               type='text'
@@ -178,9 +178,9 @@ class App extends React.Component {
               placeholder={state.licenceNumber} />
           </div>
         </form>
-        <div>
-          <button form='licence' type='submit'>submit</button>
-          <button onClick={(evt) => this.handleCancel(evt)}>cancel</button>
+        <div className='buttonDiv'>
+          <button className='green' form='licence' type='submit'>SUBMIT</button>
+          <button className='red' onClick={(evt) => this.handleCancel(evt)}>CANCEL</button>
         </div>
       </div>
     )
