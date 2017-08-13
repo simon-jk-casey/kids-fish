@@ -6,6 +6,7 @@
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon --watch server server/index & webpack --watch",
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors", 
     "start": "node server/index",
     "test": "ava  -v 'test/**/*.test.js'",
     "watch": "nodemon -e js,jsx -x npm test",
