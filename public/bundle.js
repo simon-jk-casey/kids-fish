@@ -9826,7 +9826,9 @@ var App = function (_React$Component) {
     value: function getUniqueLicenceCode() {
       var _this2 = this;
 
-      _superagent2.default.get('https://childlicence.herokuapp.com/api/v1/licensing').get('http://localhost:3000/api/v1/licensing').end(function (err, res) {
+      _superagent2.default.get('https://childlicence.herokuapp.com/api/v1/licensing')
+      // .get('http://localhost:3000/api/v1/licensing')
+      .end(function (err, res) {
         if (err) {
           return 'Error - Reload Page';
         } else {
