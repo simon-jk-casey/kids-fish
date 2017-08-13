@@ -9,6 +9,8 @@ exports.up = function(knex, Promise) {
     table.string('region').notNullable()
     table.date('birthdate').notNullable()
     table.date('issueDate').notNullable()
+    table.integer('issueMonth')
+    table.integer('issueYear')
   })
 };
 

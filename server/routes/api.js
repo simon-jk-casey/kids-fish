@@ -8,7 +8,11 @@ router.get('/v1', (req, res) => {
 })
 
 router.post('/v1/licensing', (req, res) => {
-  console.log(req.body)
+  db.enrolLicence(req.body)
+  .then(() => res.sendStatus(200))
+  .catch((err) => {
+    throw err
+  })
 })
 
 module.exports = router
