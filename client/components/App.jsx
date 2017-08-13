@@ -28,12 +28,12 @@ class App extends React.Component {
   getInitialState () {
     return {
       issueDate: this.todaysDate()
-      // licenceNumber: this.getUniqueLicenceCode()
     }
   }
 
   getUniqueLicenceCode () {
     request
+      // .get('https://childLicense.herokuapp.com/api/v1/licensing')
       .get('http://localhost:3000/api/v1/licensing')
       .end((err, res) => {
         if (err) {
@@ -101,6 +101,7 @@ class App extends React.Component {
     }
     evt.preventDefault()
     request
+      // .post('https://childLicense.herokuapp.com/api/v1/licensing')
       .post('http://localhost:3000/api/v1/licensing')
       .send(licenceObject)
       .end((err, res) => {
@@ -110,6 +111,10 @@ class App extends React.Component {
           console.log('repsonse', res)
         }
       })
+    document.getElementById('licence').reset()
+    this.state = this.getInitialState()
+    this.getUniqueLicenceCode()
+    console.log(this.state)
   }
 
   handleCancel (evt) {
