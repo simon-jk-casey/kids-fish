@@ -33,7 +33,7 @@ class App extends React.Component {
 
   getUniqueLicenceCode () {
     request
-      // .get('https://childLicense.herokuapp.com/api/v1/licensing')
+      // .get('https://childlicence.herokuapp.com/api/v1/licensing')
       .get('http://localhost:3000/api/v1/licensing')
       .end((err, res) => {
         if (err) {
@@ -101,7 +101,7 @@ class App extends React.Component {
     }
     evt.preventDefault()
     request
-      // .post('https://childLicense.herokuapp.com/api/v1/licensing')
+      // .post('https://childlicence.herokuapp.com/api/v1/licensing')
       .post('http://localhost:3000/api/v1/licensing')
       .send(licenceObject)
       .end((err, res) => {
