@@ -15,4 +15,15 @@ router.post('/v1/licensing', (req, res) => {
   })
 })
 
+router.get('/v1/licensing', (req, res) => {
+  db.licenceCount()
+  .then((licenceCount) => {
+    console.log(licenceCount)
+    res.json(licenceCount)
+  })
+  .catch((err) => {
+    throw err
+  })
+})
+
 module.exports = router

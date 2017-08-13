@@ -21,11 +21,37 @@ class App extends React.Component {
     ]
   }
 
+  componentWillMount () {
+    this.getUniqueLicenceCode()
+  }
+
   getInitialState () {
     return {
-      issueDate: this.todaysDate(),
-      licenceNumber: '00000001'
+      issueDate: this.todaysDate()
+      // licenceNumber: this.getUniqueLicenceCode()
     }
+  }
+
+  getUniqueLicenceCode () {
+    request
+      .get('http://localhost:3000/api/v1/licensing')
+      .end((err, res) => {
+        if (err) {
+          return 'Error - Reload Page'
+        } else {
+          const licenseCount = res.body[0].count + 1
+          let countString = licenseCount.toString()
+          let iterator = 8 - countString.length
+          let zeroString = ''
+          if (countString.length < 8) {
+            for (var i = 0; i < iterator; i++) {
+              zeroString += '0'
+            }
+            let currentLicenceNumber = zeroString + countString
+            this.setState({ licenceNumber: currentLicenceNumber })
+          }
+        }
+      })
   }
 
   todaysDate () {
@@ -93,6 +119,7 @@ class App extends React.Component {
   }
 
   render () {
+    console.log(this.state)
     const { state, regions } = this
     return (
       <div className='licenceWrapper'>

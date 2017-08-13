@@ -8,6 +8,11 @@ function enrolLicence (licenseData) {
   return knex('licensing').insert(licenseData)
 }
 
+function licenceCount () {
+  return knex('licensing').count('uniqueLicenceCode as count')
+}
+
 module.exports = {
-  enrolLicence
+  enrolLicence,
+  licenceCount
 }
